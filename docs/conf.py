@@ -6,7 +6,7 @@ copyright = "AiiDA Team"
 extensions = ["myst_parser"]
 
 suppress_warnings = ["myst.header"]
-myst_enable_extensions = ["fieldlist"]
+myst_enable_extensions = ["fieldlist", "linkify"]
 
 html_theme = "furo"
 html_title = "AiiDA Team Compass"
