@@ -1,7 +1,7 @@
 # AiiDA Team Compass
 
 ```{toctree}
-:caption: Roadmap Items
+:caption: Active Roadmap Items
 :glob:
 :titlesonly:
 

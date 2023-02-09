@@ -16,6 +16,8 @@ jobs:
       - name: Trigger RTDs build
         uses: dfm/rtds-action@v1
         with:
+          # these are added to https://github.com/aiidateam/team-compass/settings/secrets/actions
+          # from the "Generic API incoming webhook " at https://readthedocs.org/dashboard/team-compass/integrations
           webhook_url: ${{ secrets.RTD_WEBHOOK_URL }}
           webhook_token: ${{ secrets.RTD_WEBHOOK_TOKEN }}
           commit_ref: ${{ github.ref }}

@@ -67,6 +67,7 @@ def update_roadmap(app: Sphinx):
         if not (item_path.exists() and item_path.read_text("utf8") == md_content):
             # don't write if the content is the same
             # so that the file is not marked as changed by sphinx
+            item_path.parent.mkdir(exist_ok=True, parents=True)
             item_path.write_text(md_content)
 
         read_files.add(item_path.name)
