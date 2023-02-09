@@ -49,9 +49,9 @@ def update_roadmap(app: Sphinx):
         )
         return
 
-    api = GhApi(owner="aiidateam", repo="team-compass", token=token)
+    api = GhApi(token=token)
     # see https://docs.github.com/en/rest/issues/issues?apiVersion=2022-11-28
-    for issue in api.issues.list(state="open", labels="roadmap-item,active"):
+    for issue in api.issues.list_for_repo("aiidateam", "team-compass", state="open", labels="roadmap/active"):
         LOGGER.info(f"Reading issue {issue['id']}")
         issue_id = issue["id"]
         title = issue["title"]
