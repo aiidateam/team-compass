@@ -51,7 +51,9 @@ def update_roadmap(app: Sphinx):
 
     api = GhApi(token=token)
     # see https://docs.github.com/en/rest/issues/issues?apiVersion=2022-11-28
-    for issue in api.issues.list_for_repo("aiidateam", "team-compass", state="open", labels="roadmap/active"):
+    for issue in api.issues.list_for_repo(
+        "aiidateam", "team-compass", state="open", labels="roadmap/active"
+    ):
         LOGGER.info(f"Reading issue {issue['id']}")
         issue_id = issue["id"]
         title = issue["title"]
@@ -75,3 +77,6 @@ def update_roadmap(app: Sphinx):
     # road old files
     for item in current_files - read_files:
         roadmap_dir.joinpath(item).unlink()
+
+    # TODO ghapi does not support new style projects 😢 https://github.com/fastai/ghapi/issues/155
+    # ideally we also want to show the priority ranking of the issues
