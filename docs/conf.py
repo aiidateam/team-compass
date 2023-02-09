@@ -41,7 +41,7 @@ def update_roadmap(app: Sphinx):
 
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
-        LOGGER.info(
+        LOGGER.warning(
             f"No token found at {os.environ.get('GITHUB_TOKEN')}, GitHub "
             "issue information will not be used. "
             "Create a GitHub Personal Access Token and assign it to GITHUB_TOKEN"
