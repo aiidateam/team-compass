@@ -7,7 +7,20 @@ assignees: ''
 
 ---
 
-See <https://github.com/aiidateam/AEP/pull/38> for more details
+See <https://github.com/aiidateam/AEP/pull/38> for the full item specification.
+
+The issue heading should be no longer than 50 characters, and provide a concise description of the item.
+
+It should be prepended with the item category, in the form:
+
+- `Defect: `
+- `Usability: `
+- `Future: `
+- `Dev: `
+
+From the title, it should be clear for users/stakeholders what the item addresses.
+
+It should also, ideally, be "proactive", such as "Make it easier ...", "Allow users to ...", "Improve the ...".
 
 ## Motivation
 
